@@ -1,0 +1,32 @@
+こちらはheroku linebot beebotte raspi を使ったカメラの操作プログラムです
+使う場合はpub/sub両方に
+beebotteの証明書を入れてください
+DL用URL
+https://beebotte.com/certs/mqtt.beebotte.com.pem
+
+証明書を入れたらlinebot_pubの中で
+heroku git:remote -a {自分のHEROKU_APP_NAMEに変える}
+でherokuにリモートリポジトリを作り
+heroku config:set YOUR_CHANNEL_ACCESS_TOKEN="自分のlineアクセストークン"
+heroku config:set YOUR_CHANNEL_SECRET="自分のlineチャネルシークレット"
+で環境変数を指定してLineとつながるようにする
+beebotteも使う場合
+heroku config:set　YOUR_BEEBOTTE_TOKEN=token_の形で指定する
+
+あとは
+git push heroku master
+でherokuにアプリが実装されbotサーバーとして使えるようになるので
+動作が確認できたらお好みで編集してみてください
+
+リッチメニューを作る際は
+https://manager.line.biz/account/@408bwmob/richmenu
+ここでbotごとに実装してみてください
+
+motionの編集は
+参考フォルダの方に入ってますのでそちらをご確認ください
+
+
+
+
+
+
