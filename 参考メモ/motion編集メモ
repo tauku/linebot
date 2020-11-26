@@ -1,0 +1,29 @@
+/etc/motion/motion.conf
+の609あたりの
+; on_picture_save
+を
+on_picture_save
+にしてから後ろに実行したいコマンドを入れると、画像を記録した時点でコマンドを実行してくれるので
+ここにheroku(linebot)サーバーにアップロードするコマンドを作成できれば
+linebotに画像が送れる。herokuサーバーはgit管理していないファイルは時間が経つと消えるので
+受け取った直後にlineに画像を送るように設定しないといけない
+
+11/16motion.confにモジュールをインポートしてコマンドを設定してみる
+
+motion.confの編集
+on_picture_save  curl -X POST -H "Authorization: 
+Bearer Line Notifyアクセストークン" -F 
+"message = ラズパイから画像を送ります" -F "image    File=@%f" https://notify-api.line.me/api/notify
+これでlineNotifyにmotionの画像を送ることになっている。
+
+
+motionからlineNotifyに画像を送信するプログラム参考１
+https://www.itmedia.co.jp/news/articles/1912/01/news009_2.html
+２
+https://www.itmedia.co.jp/news/articles/1912/27/news036.html
+
+on_picture_saveの後に
+curl -n -X POST https://api.heroku.com/apps/example-app/formation/worker \
+-nはトークンを予めheroku に登録しておけば、それで認証するオプション
+のような感じでherokuに画像を送ることは可能だが、現在それを認知するすべがない。
+アドオンで画像DBを追加してそこに画像を入れておき、replyによってそれを持ってくることは可能だと思われる。

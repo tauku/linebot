@@ -1,0 +1,48 @@
+java版 linebot のdeploy手順
+https://developers.line.biz/ja/docs/messaging-api/building-sample-bot-with-heroku/
+
+application.ymlのchannel-secretフィールドとchannel-tokenフィールドに入力します。
+重要！！「This is a template for the configuration file. Make a copy called `application.yml` and change the values below.」の部分は削除します。！！
+Herokuダッシュボードで新しいHerokuアプリを作成して、アプリ名をコピーします。
+ここは
+https://dashboard.heroku.com/apps
+で新しいappを作る
+herokuのsettingからConfig VarsのReveal Config Vars　を押し
+LINE_BOT_CHANNEL_TOKENと　LINE_BOT_CHANNEL_SECRETに
+https://developers.line.biz/console/
+で作ったチャネルから
+チャネルアクセストークンとチャネルシークレット を貼る
+
+herokuで作ったapp名は覚えておいて
+
+https://appの名前.herokuapp.com/callback
+をlineのwebhookに入力し、!!!webhookを有効にする!!!
+
+python版のlinebotデプロイ参考
+https://qiita.com/kro/items/67f7510b36945eb9689b
+heroku config:set YOUR_CHANNEL_SECRET="Channel Secretの欄の文字列" --app <アプリケーション名>
+heroku config:set YOUR_CHANNEL_ACCESS_TOKEN="アクセストークンの欄の文字列" --app <アプリケーション名>
+=のあとはスペースを入れず
+heroku config:set YOUR_CHANNEL_ACCESS_TOKEN=abcdefghijklmnopqrstu= --app linebottest
+のように記入する
+git push heroku master
+をする前に
+heroku git:remote -a {HEROKU_APP_NAME}
+をしておかないとpushするgitがないので実行できない
+先にremoteしておけば↑の--appは入れなくても環境変数(YOUR_CHANNEL_SECRETなど)を設定できる
+
+python版の中身の参考に
+https://qiita.com/suigin/items/0deb9451f45e351acf92
+pipで入れたline-bot-sdkから
+/home/user/.local/lib/python2.7/site-packages
+raspiだとここに入ってました
+futureフォルダとlinebotフォルダを適当なフォルダにコピーして
+https://github.com/line/line-bot-sdk-python/blob/master/README.rst
+ここのusageの部分をapp.pyとしてコピーすればflaskでも実行できる(一部書き換えあり)
+flaskで開いたページはローカルなら設定を変えずに見られる
+
+リッチメニュー実装
+https://manager.line.biz/account/@408bwmob/richmenu
+
+linebot編集参考(JSですが)
+https://www.non-engineers.jp/tutorial-posts/gas-linebot-modify

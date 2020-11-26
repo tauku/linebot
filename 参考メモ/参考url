@@ -1,0 +1,68 @@
+raspi にcv2をインストール(pi os normal)
+https://qiita.com/linyixian/items/02b21609067f694b4a73
+
+raspi にherokuのcliをインストールする方法
+https://qiita.com/sunaga70/items/593ddb3e1eb36774bc5d
+Linebotのherokuを使ったデプロイ
+https://developers.line.biz/ja/docs/messaging-api/building-sample-bot-with-heroku/
+
+herokuの公式ドキュメント　python版　ここから別のチュートリアルにも行ける
+https://devcenter.heroku.com/articles/getting-started-with-python
+
+line-bot python版デプロイの参考1
+https://qiita.com/suigin/items/0deb9451f45e351acf92
+
+line-bot python版デプロイの参考2
+https://qiita.com/kro/items/67f7510b36945eb9689b
+
+line-bot python版デプロイの参考3
+https://qiita.com/Riiina/items/40ab34f553ec08304083
+
+herokuの操作早見
+https://qiita.com/chihiro/items/5c3ff400f6cb99deb945
+
+python版bot github
+https://github.com/line/line-bot-sdk-python
+
+https://keinumata.hatenablog.com/entry/2018/05/08/122348
+
+usbcamの動作参考
+https://uepon.hatenadiary.com/entry/2017/01/22/170349
+
+heroku にmqttを入れてlineとつなげて、beebotteを経由してraspiをlineから操作できるようにする参考
+https://qiita.com/2019Shun/items/c055d56f948aba99d758
+
+opencvでカメラから画像保存
+https://note.nkmk.me/python-opencv-camera-to-still-image/
+
+opencvで画像表示
+https://note.nkmk.me/python-opencv-videocapture-file-camera/
+
+opencvでjpgなどの対応していなかったものをPILで対応させて表示する方法
+https://betashort-lab.com/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/python/tkinter%E3%81%A7%E7%94%BB%E5%
+83%8F%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95/
+
+heroku なしでraspiからlineにカメラ映像を送る方法
+https://dream-soft.mydns.jp/blog/developper/smarthome/2020/02/678/
+
+raspiとmqtt
+http://independence-sys.net/main/?p=4058
+
+iphoneからsshでraspiにコマンド送信
+https://reasonable-code.com/iphone-to-raspberrypi/
+
+webcamの設定確認
+https://note.nkmk.me/python-opencv-getbuildinformation/
+
+pythonカメラ操作
+https://qiita.com/opto-line/items/7ade854c26a50a485159#opencv
+%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+
+raspiでusbcamの操作
+https://uepon.hatenadiary.com/entry/2017/01/22/170349
+
+heroku のapiキーの取得方法
+https://devcenter.heroku.com/articles/platform-api-quickstart
+
+raspiのサーバー運用
+https://qiita.com/picker/items/0466c55f9a03ebb0bd90

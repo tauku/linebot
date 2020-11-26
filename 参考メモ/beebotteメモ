@@ -1,0 +1,15 @@
+beebotte サイト兼証明書DL用URL
+https://beebotte.com/docs/mqtt
+
+beebottteはサイトからコンソールを開いてテストメッセージを送れる
+
+Nord-Redを受信に使う場合
+受信のためのNode-Redインストール参考
+
+https://qiita.com/HeRo/items/9978bedf353fc790a5b5
+
+https://qiita.com/utaani/items/7155c62d6c5e96822afb
+
+raspi側で実行するコマンド
+node-red-start
+
